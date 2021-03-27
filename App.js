@@ -2,17 +2,16 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-
 import AccountScreen from './src/screens/AccountScreen';
 import SigninScreen from './src/screens/SigninScreen';
 import SignupScreen from './src/screens/SignupScreen';
-import TrackCreateScreen from './src/screens/TrackCreateScreen';
-import TrackDetailScreen from './src/screens/TrackDetailScreen';
-import TrackListScreen from './src/screens/TrackListScreen';
+import InterestPointsScreen from './src/screens/InterestPointsScreen';
 import { Provider as AuthProvider } from './src/context/AuthContext';
 import { setNavigator } from './src/navigationRef';
 import ResolveAuthScreen from './src/screens/ResolveAuthScreen';
 import { Provider as LocationProvider } from './src/context/LocationContext';
+import MapScreen from './src/screens/MapScreen';
+import { FontAwesome } from '@expo/vector-icons';
 
 const switchNavigator = createSwitchNavigator({
   ResolveAuth: ResolveAuthScreen,
@@ -21,12 +20,33 @@ const switchNavigator = createSwitchNavigator({
     Signin: SigninScreen,
   }),
   mainFlow: createBottomTabNavigator({
-    trackListFlow: createStackNavigator({
-      TrackList: TrackListScreen,
-      TrackDetail: TrackDetailScreen,
-    }),
-    TrackCreate: TrackCreateScreen,
-    Account: AccountScreen,
+    InterestScreen:{
+      screen: InterestPointsScreen,
+      navigationOptions: {
+        tabBarLabel: 'Interest Screen',
+        tabBarIcon: ({ tintColor }) => (
+          <FontAwesome name="map-marker" size={24} color="black" />
+        )
+      }  
+    },
+    Map:{
+      screen: MapScreen,
+      navigationOptions: {
+        tabBarLabel: 'Map',
+        tabBarIcon: ({ tintColor }) => (
+          <FontAwesome name="map-o" size={24} color="black" />
+        )
+      }  
+    },
+    Account: {
+      screen : AccountScreen,
+      navigationOptions: {
+      tabBarLabel: 'Account',
+      tabBarIcon: ({ tintColor }) => (
+        <FontAwesome name="user" size={24} color="black" />
+      )
+      }  
+    },
   }),
 });
 

@@ -26,6 +26,8 @@ const TrackCreateScreen = ({ isFocused }) => {
       <Text h2>Create a Track</Text>
       <Map />
       {err ? <Text>Please enable location services</Text> : null}
+
+      
       <TrackForm />
     </SafeAreaView>
   );

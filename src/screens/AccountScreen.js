@@ -15,7 +15,7 @@ const AccountScreen = () => {
     <SafeAreaView forceInset={{ top: 'always' }}>
       <Text style={styles.text}>Account</Text>
       <Spacer>
-        <Button title="Sign Out" onPress={signout} />
+        <Button style = {{ justifyContent : 'center' }} title="Sign Out" onPress={signout} />
       </Spacer>
     </SafeAreaView>
   );

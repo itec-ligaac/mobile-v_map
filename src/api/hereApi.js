@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL: 'https://geocoder.ls.hereapi.com/6.2/geocode.{format}',
+    baseURL: 'https://geocode.search.hereapi.com/v1/geocode?q=',
     headers: {
-        apikey: '0OocArBszWAX-iH8HNoPuolPIt1tLLTfzABohRuLYtE'
+        Authorization: 'Bearer [O5HYffIloG7N2_D_38VGQHEVr2Z0ndXPOlzofi2Ztv4]'
     }
 });

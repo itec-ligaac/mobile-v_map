@@ -5,12 +5,10 @@ import MasterList from '../components/MasterList'
 
 const TrackListScreen = ({ navigation }) => {
 
-  const [result, setResult] = useState(null);
-
   LogBox.ignoreAllLogs();
 
   return (
-    <SafeAreaView forceInset={{ top: 'always', bottom: 'always' }}>
+    <SafeAreaView forceInset={{ top: 'always' }}>
       <Text style={styles.text}>Interest Points</Text>
 
       <MasterList

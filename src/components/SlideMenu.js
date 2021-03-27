@@ -38,7 +38,9 @@ const SideMenu = ({ header, imagePath1, imagePath2, imagePath3, name1, name2, na
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => navigate("Map")}
+                >
                     <View style={styles.view}>
                         <Image
                             style={styles.image}
@@ -52,7 +54,7 @@ const SideMenu = ({ header, imagePath1, imagePath2, imagePath3, name1, name2, na
                 </TouchableOpacity>
 
                 <TouchableOpacity
-
+                    onPress={() => navigate("Map")}
                 >
                     <View style={styles.view}>
                         <Image
@@ -90,6 +92,7 @@ const styles = StyleSheet.create({
     image : {
         width: 300,
         height: 200,
+        borderRadius: 5,
         resizeMode: 'stretch',
     },
 

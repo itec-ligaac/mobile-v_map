@@ -18,12 +18,12 @@ const TrackListScreen = ({ navigation }) => {
       >
         <SlideMenu 
           header = 'For you'
-          imagePath1= '/Users/user/Development/React-Native /mobile-v_map/assets/image1.jpg'
-          imagePath2= '/Users/user/Development/React-Native /mobile-v_map/assets/image2.jpg'
-          imagePath3= '/Users/user/Development/React-Native /mobile-v_map/assets/image3.jpg'
-          name1 = ''
-          name2 = ''
-          name3 = ''
+          imagePath1= 'https://lh5.googleusercontent.com/p/AF1QipP9GkxnWpm35-Hx-jxwFkbg8wxUW3rqJcHvAq6q=w426-h240-k-no'
+          imagePath2= 'https://lh5.googleusercontent.com/p/AF1QipO6yV7dk5tZOjt9lRLRF9emWfghxjq0BcWa6N4-=w427-h240-k-no'
+          imagePath3= 'https://lh5.googleusercontent.com/p/AF1QipO4ng-Oon3K077DOtBZ34zyzEoKMKeaChIAs5FZ=w408-h270-k-no'
+          name1 = 'Burghria Tomis'
+          name2 = 'Restaurant Toscana'
+          name3 = 'Alta locatie XD'
         />
 
         <SlideMenu
@@ -31,6 +31,9 @@ const TrackListScreen = ({ navigation }) => {
           imagePath1='/Users/user/Development/React-Native /mobile-v_map/assets/image1.jpg'
           imagePath2='/Users/user/Development/React-Native /mobile-v_map/assets/image2.jpg'
           imagePath3='/Users/user/Development/React-Native /mobile-v_map/assets/image3.jpg'
+          name1='Burghria Tomis'
+          name2='Restaurant Toscana'
+          name3='Alta locatie XD'
         />
 
         <SlideMenu
@@ -38,6 +41,9 @@ const TrackListScreen = ({ navigation }) => {
           imagePath1='/Users/user/Development/React-Native /mobile-v_map/assets/image1.jpg'
           imagePath2='/Users/user/Development/React-Native /mobile-v_map/assets/image2.jpg'
           imagePath3='/Users/user/Development/React-Native /mobile-v_map/assets/image3.jpg'
+          name1='Burghria Tomis'
+          name2='Restaurant Toscana'
+          name3='Alta locatie XD'
         />
       </ScrollView>
 

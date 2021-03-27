@@ -5,11 +5,12 @@ import {
     Image,
     ScrollView,
     StyleSheet,
+    TouchableOpacity,
+    Touchable
 } from 'react-native'
+import { navigate } from "../navigationRef";
 
-const SideMenu = ({ header, imagePath1, imagePath2, imagePath3 }) => {
-
-    const img1 = imagePath1
+const SideMenu = ({ header, imagePath1, imagePath2, imagePath3, name1, name2, name3 }) => {
 
     return (
         <View>
@@ -22,37 +23,47 @@ const SideMenu = ({ header, imagePath1, imagePath2, imagePath3 }) => {
                 style = {styles.scrollView}
                 showsHorizontalScrollIndicator = {false}
             >
-                <View style = { styles.view }>
-                    <Image
-                        style={styles.image}
-                        source={{ uri : `${imagePath1}` }}
-                    />
-
-                    <Text style={styles.text}>
-                        Burgheria Tomis
-                    </Text>
-                </View>
-
-                <View style={styles.view}>
-                    <Image
-                        style={styles.image}
-                        source={{ uri: imagePath2 }}
-
+                <TouchableOpacity
+                    onPress = {() => navigate("Map")}
+                >
+                    <View style = { styles.view }>
+                        <Image
+                            style={styles.image}
+                            source={{ uri: `${imagePath1}` }}
                         />
-                    <Text style={styles.text}>
-                        Burgheria Tomis
-                    </Text>
-                </View>
 
-                <View style={styles.view}>
-                    <Image
-                        style = {styles.image}
-                        source={{ uri: imagePath3 }}
-                    />
-                    <Text style = {styles.text}>
-                        Burgheria Tomis
-                    </Text>
-                </View>
+                        <Text style={styles.text}>
+                            {name1}
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.view}>
+                        <Image
+                            style={styles.image}
+                            source={{ uri: `${imagePath2}` }}
+
+                            />
+                        <Text style={styles.text}>
+                            {name2}
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+
+                >
+                    <View style={styles.view}>
+                        <Image
+                            style = {styles.image}
+                            source={{ uri: `${imagePath3}` }}
+                        />
+                        <Text style = {styles.text}>
+                            {name3}
+                        </Text>
+                    </View>
+                </TouchableOpacity>
 
             </ScrollView>
         </View>
@@ -84,7 +95,7 @@ const styles = StyleSheet.create({
     text : {
         paddingTop : 5,
         fontSize: 20, 
-        color: '#ED7A00',
+        color: 'white',
         fontWeight : 'bold'
     },
 

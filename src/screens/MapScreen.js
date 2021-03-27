@@ -14,8 +14,8 @@ const TrackCreateScreen = ({ isFocused }) => {
   //import hereapi from yes
   const searchApi = async () => {
     try {
-      hereApi.get('search');
-      const response = await hereApi.get('');
+      hereApi.get('');
+      const response = await hereApi.get('5+Rue+Daunou%2C+75000+Paris%2C+France');
       setResults(response.items.id);
       console.log(results);
     } catch (err) {

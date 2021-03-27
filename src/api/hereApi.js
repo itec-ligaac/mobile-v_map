@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL: 'https://api.yelp.com/v3/businesses',
+    baseURL: 'https://geocoder.ls.hereapi.com/6.2/geocode.{format}',
     headers: {
-        Authorization: '0OocArBszWAX-iH8HNoPuolPIt1tLLTfzABohRuLYtE'
+        apikey: '0OocArBszWAX-iH8HNoPuolPIt1tLLTfzABohRuLYtE'
     }
 });

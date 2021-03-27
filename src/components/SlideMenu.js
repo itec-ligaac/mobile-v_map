@@ -71,6 +71,7 @@ const SideMenu = ({ header, imagePath1, imagePath2, imagePath3, name1, name2, na
 };
 
 const styles = StyleSheet.create({
+    
     scrollView : {
         backgroundColor: 'white',
         marginHorizontal: 20,
